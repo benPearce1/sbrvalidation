@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{930BADAE-CEC4-4C65-9B94-51B4F626384E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SbrValidation.Router", "SbrValidation.Router\SbrValidation.Router.csproj", "{0E2C28F5-6DE2-4D7E-8C79-06BFFF39D748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SbrValidation.Worker", "SbrValidation.Worker\SbrValidation.Worker.csproj", "{7D52DB6A-0750-43AB-AFA5-740F2E94B33E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{930BADAE-CEC4-4C65-9B94-51B4F626384E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{930BADAE-CEC4-4C65-9B94-51B4F626384E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{930BADAE-CEC4-4C65-9B94-51B4F626384E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{930BADAE-CEC4-4C65-9B94-51B4F626384E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E2C28F5-6DE2-4D7E-8C79-06BFFF39D748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E2C28F5-6DE2-4D7E-8C79-06BFFF39D748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E2C28F5-6DE2-4D7E-8C79-06BFFF39D748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E2C28F5-6DE2-4D7E-8C79-06BFFF39D748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D52DB6A-0750-43AB-AFA5-740F2E94B33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D52DB6A-0750-43AB-AFA5-740F2E94B33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D52DB6A-0750-43AB-AFA5-740F2E94B33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D52DB6A-0750-43AB-AFA5-740F2E94B33E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
