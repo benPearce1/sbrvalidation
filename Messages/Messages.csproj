@@ -39,6 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FundValidationService\List\BulkListProcessComplete.cs" />
+    <Compile Include="FundValidationService\List\BulkListProcessRequest.cs" />
+    <Compile Include="FundValidationService\List\BulkListSplitResult.cs" />
+    <Compile Include="FundValidationService\List\MapToCanonicalResponse.cs" />
+    <Compile Include="FundValidationService\List\SingleProcessRequest.cs" />
+    <Compile Include="FundValidationService\List\SingleProcessResponse.cs" />
+    <Compile Include="FundValidationService\List\MapToCanonical.cs" />
+    <Compile Include="FundValidationService\List\TaxonomyValidate.cs" />
+    <Compile Include="FundValidationService\List\TaxonomyValidateResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
