@@ -14,17 +14,21 @@ namespace SbrValidation.Worker.FVS
         IActorRef splitActor;
         IActorRef coordinator;
 
+        private List<string> results;
+        private int resultCount;
+
         public IStash Stash { get; set; }
 
         public FVSListCommanderActor()
         {
+            results = new List<string>();
             Ready();
         }
 
         protected override void PreStart()
         {
             splitActor = Context.ActorOf(Props.Create(() => new FVSListBulkSplitActor()),"split");
-            coordinator = Context.ActorOf(Props.Create(() => new FVSListCoordinatorActor(Self)).WithRouter(new RoundRobinPool(5)), "coordinator");
+            coordinator = Context.ActorOf(Props.Create(() => new FVSListCoordinatorActor(Self)).WithRouter(new RoundRobinPool(1)), "coordinator");
         }
 
         private void Ready()
@@ -36,6 +40,7 @@ namespace SbrValidation.Worker.FVS
 
             Receive<BulkListSplitResult>(result =>
             {
+                resultCount = result.Parts.Count;
                 foreach (var r in result.Parts)
                 {
                     Console.WriteLine("Sending {0}", r);
