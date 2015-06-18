@@ -40,10 +40,9 @@ namespace SbrValidation.Worker.FVS
 
             Receive<BulkListSplitResult>(result =>
             {
-                resultCount = result.Parts.Count;
+                Console.WriteLine("Found {0} parts in message", result.Parts.Count);
                 foreach (var r in result.Parts)
                 {
-                    Console.WriteLine("Sending {0}", r);
                     coordinator.Tell(new SingleProcessRequest(r));
                 }
             });

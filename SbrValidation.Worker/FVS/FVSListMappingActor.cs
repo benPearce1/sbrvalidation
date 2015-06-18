@@ -31,8 +31,8 @@ namespace SbrValidation.Worker.FVS
                 stream.Position = 0;
                 doc.Load(stream);
 
-                JObject jsonJObject = new JObject();
-                jsonJObject.
+                //JObject jsonJObject = new JObject();
+                //jsonJObject.
             });
         }
     }

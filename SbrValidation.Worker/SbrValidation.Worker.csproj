@@ -39,11 +39,15 @@
     <Reference Include="JeffFerguson.Gepsio">
       <HintPath>..\lib\JeffFerguson.Gepsio.dll</HintPath>
     </Reference>
+    <Reference Include="MimeKitLite">
+      <HintPath>..\packages\MimeKitLite.1.2.4.0\lib\net45\MimeKitLite.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />

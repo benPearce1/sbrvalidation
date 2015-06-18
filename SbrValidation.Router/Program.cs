@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,9 +19,9 @@ namespace SbrValidation.Router
         {
             RouterActorSystem = ActorSystem.Create("router");
             commander = RouterActorSystem.ActorOf(Props.Create(() => new FVSListCommanderActor()),"commander");
-            var data = new List<string>();
-            Enumerable.Range(0, 20).ToList().ForEach(x => data.Add(string.Format("document data {0}", x)));
-            commander.Tell(new Messages.FundValidationService.List.BulkListProcessRequest(string.Join("<DocumentSeperator>", data.ToArray())));
+            var data = File.ReadAllText(@"C:\Users\Ben\Downloads\sean_20150424_1319_pull_receive_payload.dat");
+
+            commander.Tell(new Messages.FundValidationService.List.BulkListProcessRequest(data));
             RouterActorSystem.WaitForShutdown();
         }
 
